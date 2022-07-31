@@ -12,7 +12,7 @@ class CurrencyConverter extends StatefulWidget {
 
 class _CurrencyConverterState extends State<CurrencyConverter> {
   final fromTextController = TextEditingController();
-  late List<String> currencies;
+  late List<String> currencies = [];
   String fromCurrency = "USD";
   String toCurrency = "LKR";
   late String result="";
@@ -122,9 +122,9 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
           .toList(),
       onChanged: (value) {
         if(currencyCategory == fromCurrency){
-          _onFromChanged(value!);
+          _onFromChanged(value as String);
         }else {
-          _onToChanged(value!);
+          _onToChanged(value as String);
         }
       },
     );

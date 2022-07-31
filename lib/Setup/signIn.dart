@@ -13,29 +13,31 @@ class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   late String _email, _password;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {   
     return Scaffold(
       appBar: AppBar(
         title: Text('Sign in'),
       ),
-      body: Form(
-        key: _formKey,
-        child: Column(
-          children:<Widget>[
-          TextFormField(
-            validator:(input){
-              if(input!.isEmpty){
-                return 'Please type an email';
-              }
-            } ,
-            onSaved:(input) => _email =input!,
-            decoration: InputDecoration(
-              labelText: 'Email'
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 30),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:<Widget>[
+            TextFormField(
+              validator:(input){
+                if(input!.isEmpty){
+                  return 'Please type an email';
+                }
+              } ,
+              onSaved:(input) => _email =input!,
+              decoration: InputDecoration(
+                labelText: 'Email'
+              ),
             ),
-
-          ),
-        
-          TextFormField(
+          
+            TextFormField(
               validator:(input){
                 if(input!.length<6){
                   return 'Please type a password';
@@ -47,12 +49,14 @@ class _LoginPageState extends State<LoginPage> {
               ),
               obscureText: true,
             ),
+            SizedBox(height: 20,),
             ElevatedButton(
               onPressed: signIn,
               child: Text('Sign In'), 
             )
-        ]),
-        )
+          ]),
+          ),
+      )
     );
   }
   void signIn() async {  

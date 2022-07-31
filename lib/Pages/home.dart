@@ -1,4 +1,3 @@
-// ignore_for_file: unnecessary_import
 
 import 'package:check/Setup/calculator.dart';
 import 'package:check/Setup/photo.dart';

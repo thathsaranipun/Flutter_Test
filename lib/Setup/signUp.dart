@@ -15,40 +15,47 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(),
-      body: Form(
-        key: _formKey,
-        child: Column(
-          children: <Widget>[
-            TextFormField(
-              validator: (input) {
-                if(input!.isEmpty){
-                  return 'Provide an email';
-                }
-              },
-              decoration: InputDecoration(
-                labelText: 'Email'
+      appBar: new AppBar(
+        title: Text('Sign up'),
+      ),
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 30),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextFormField(
+                validator: (input) {
+                  if(input!.isEmpty){
+                    return 'Provide an email';
+                  }
+                },
+                decoration: InputDecoration(
+                  labelText: 'Email'
+                ),
+                onSaved: (input) => _email = input!,
               ),
-              onSaved: (input) => _email = input!,
-            ),
-            TextFormField(
-              validator: (input) {
-                if(input!.length < 6){
-                  return 'Longer password please';
-                }
-              },
-              decoration: InputDecoration(
-                labelText: 'Password'
+              TextFormField(
+                validator: (input) {
+                  if(input!.length < 6){
+                    return 'Longer password please';
+                  }
+                },
+                decoration: InputDecoration(
+                  labelText: 'Password'
+                ),
+                onSaved: (input) => _password = input!,
+                obscureText: true,
               ),
-              onSaved: (input) => _password = input!,
-              obscureText: true,
-            ),
-            ElevatedButton(
-              onPressed: signUp,
-              child: Text('Sign up'),
-            ),
-          ],
-        )
+              SizedBox(height: 20,),
+              ElevatedButton(
+                onPressed: signUp,
+                child: Text('Sign up'),
+              ),
+            ],
+          )
+        ),
       ),
     );
   }

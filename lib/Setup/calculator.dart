@@ -12,8 +12,7 @@ List content = ["1","2","3","+","4","5","6","-","7","8","9","*","C","0",".","/",
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text("Calculator"),
         ),
@@ -41,7 +40,7 @@ List content = ["1","2","3","+","4","5","6","-","7","8","9","*","C","0",".","/",
             ),
           ],
         ),
-      ),
+      
     );
   }
 
