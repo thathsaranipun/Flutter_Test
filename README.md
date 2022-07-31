@@ -1,21 +1,21 @@
 # Flutter Test
 
-## Project Setup
+#### Project Setup
 ```
 git clone https://github.com/thathsaranipun/Flutter_Test.git
 ```
 
-## Features of the App
+#### Features of the App
 
 - SignIn / SignUp - Authentication forms for access to the app and this feature used firebase.
 - Calculator - Calculator has facility for " + , - , * , / " operations.
-- Currency Converter - This feature has the capability to convert currencies and it used [this API]( https://apilayer.com/marketplace/exchangerates_data-api#documentation-tab)
+- Currency Converter - This feature has the capability to convert currencies and it used [this API]( https://apilayer.com/marketplace/exchangerates_data-api#documentation-tab).
 - Theme - This feature has the capability to change the light theme to dark theme.
 - Photo - This feature has the capability to take the photo and save it.
 
 
 
-##  Completed Tasks
+####  Completed Tasks
 | Task | Status |
 | ------ | ------ |
 | SignIn and SignUp | Done |
@@ -24,7 +24,7 @@ git clone https://github.com/thathsaranipun/Flutter_Test.git
 | Theme | Done |
 | Photo | Inprogress |
 
-## Project Developer
+#### Project Developer
 
 Project Developed by Nipun Ariyarathna.
 
