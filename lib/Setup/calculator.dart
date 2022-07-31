@@ -23,7 +23,7 @@ List content = ["1","2","3","+","4","5","6","-","7","8","9","*","C","0",".","/",
             Expanded(
               child: Container(
                 alignment: Alignment.bottomRight,
-                decoration: BoxDecoration(color: Colors.blue),
+                decoration: BoxDecoration(color: Colors.blueAccent),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,

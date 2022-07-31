@@ -30,11 +30,11 @@ class _HomeState extends State<Home> {
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.explore),
-            label: 'Converter',
+            label: 'Calculator',
           ),
           NavigationDestination(
-            icon: Icon(Icons.commute),
-            label: 'Calculator',
+            icon: Icon(Icons.add_sharp),
+            label: 'Converter',
           ),
           NavigationDestination(
             selectedIcon: Icon(Icons.bookmark),
@@ -52,13 +52,13 @@ class _HomeState extends State<Home> {
         Container(
           color: Colors.white,
           alignment: Alignment.center,
-          child: CurrencyConverter()
+          child: Calculator(),
           
         ),
         Container(
           color: Colors.white,
           alignment: Alignment.center,
-          child: Calculator(),
+          child: CurrencyConverter(),
         ),
         Container(
           color: Colors.white,

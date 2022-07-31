@@ -85,16 +85,19 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                         ),
                         trailing: _buildDropDownButton(fromCurrency),
                       ),
-                      IconButton(
-                        icon: Icon(Icons.arrow_downward),
-                        onPressed: _doConversion,
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 15),
+                        child: ElevatedButton(
+                          onPressed: _doConversion,
+                          child: Text('Click to Convert'), 
+                        ),
                       ),
                       ListTile(
                         title: Chip(
                           label: result != null ?
                           Text(
                             result,
-                            style: Theme.of(context).textTheme.displaySmall,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ) : Text(""),
                         ),
                         trailing: _buildDropDownButton(toCurrency),
