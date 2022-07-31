@@ -1,44 +1,20 @@
-
+import 'package:check/main.dart';
 import 'package:flutter/material.dart';
 
 class ThemeApply extends StatefulWidget {
-   @override
+  @override
   _ThemeApplyState createState() => _ThemeApplyState();
 
   static _ThemeApplyState of(BuildContext context) =>
       context.findAncestorStateOfType<_ThemeApplyState>()!;
 }
 
-
 class _ThemeApplyState extends State<ThemeApply> {
-  ThemeMode _themeMode = ThemeMode.system;
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(),
-      darkTheme: ThemeData.dark(),
-      themeMode: _themeMode,
-      home: MyHomePage(title: 'Theme Apply'),
-    );
-  }
-
-  void changeTheme(ThemeMode themeMode) {
-    setState(() {
-      _themeMode = themeMode;
-    });
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-
-  MyHomePage({required this.title});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text("Theme Change"),
       ),
       body: Center(
         child: Column(
@@ -51,11 +27,14 @@ class MyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
-                    onPressed: () => ThemeApply.of(context).changeTheme(ThemeMode.light),
-                    child: Text('Light')),
-                ElevatedButton(
-                    onPressed: () => ThemeApply.of(context).changeTheme(ThemeMode.dark),
-                    child: Text('Dark')),
+                  onPressed: () => MyApp.themeNotifier.value =
+                      MyApp.themeNotifier.value == ThemeMode.light
+                          ? ThemeMode.dark
+                          : ThemeMode.light, 
+                  child: MyApp.themeNotifier.value == ThemeMode.light
+                      ? Text('Dark theme')
+                      : Text('Light theme'),
+                ),
               ],
             ),
           ],
@@ -63,5 +42,4 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
-
 }
