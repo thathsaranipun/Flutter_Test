@@ -1,16 +1,18 @@
-# check
+# Project Setup
 
-A new Flutter project.
+Project Clone - ``git clone https://github.com/thathsaranipun/Flutter_Test.git``
 
-## Getting Started
+## Features of the App
 
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- SignIn and SignUp - Authentication is handled by using Firebase and these forms have validations.
+- Calculator - Calculator has facility for " + , - , * , / " operations.
+- Currency Converter - This feature has the capability to convert currencies and it used [this API]]( https://apilayer.com/marketplace/exchangerates_data-api#documentation-tab)
+- Theme - This feature has the capability to change the light theme to dark theme.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Developer
+
+Project Developed by Nipun Ariyarathna.
