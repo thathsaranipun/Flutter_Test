@@ -22,7 +22,7 @@ git clone https://github.com/thathsaranipun/Flutter_Test.git
 | Calculator | Done |
 | Currency Convertere | Done |
 | Theme | Done |
-| Photo | Inprogress |
+| Photo | No |
 
 #### Project Developer
 
